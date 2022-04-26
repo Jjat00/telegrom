@@ -1,0 +1,31 @@
+{
+  "name": "api-green-dragon-mg",
+  "version": "0.1.0",
+  "description": "api for reading and writing geospatial data from the green dragon app",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JjatDeci/api-green-dragon-mg.git"
+  },
+  "keywords": [
+    "geospatial",
+    "geojson"
+  ],
+  "author": "Jaime Aza",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JjatDeci/api-green-dragon-mg/issues"
+  },
+  "homepage": "https://github.com/JjatDeci/api-green-dragon-mg#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "express": "^4.18.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
