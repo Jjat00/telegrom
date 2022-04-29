@@ -1,7 +1,7 @@
 {
-  "name": "api-green-dragon-mg",
+  "name": "telegrom",
   "version": "0.1.0",
-  "description": "api for reading and writing geospatial data from the green dragon app",
+  "description": "chat use node, express and websocket",
   "main": "server.js",
   "scripts": {
     "dev": "nodemon server.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JjatDeci/api-green-dragon-mg.git"
+    "url": "git+https://github.com/Jjat00/telegrom.git"
   },
   "keywords": [
     "geospatial",
@@ -18,9 +18,9 @@
   "author": "Jaime Aza",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/JjatDeci/api-green-dragon-mg/issues"
+    "url": "https://github.com/Jjat00/telegrom/issues"
   },
-  "homepage": "https://github.com/JjatDeci/api-green-dragon-mg#readme",
+  "homepage": "https://github.com/Jjat00/telegrom#readme",
   "dependencies": {
     "body-parser": "^1.20.0",
     "dotenv": "^16.0.0",
