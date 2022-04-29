@@ -1,25 +1,25 @@
-const express = require("express");
-const bodyParser = require("body-parser");
-const router = express.Router();
+require("dotenv").config();
 
+const express = require("express");
 const app = express();
+const server = require("http").Server(app);
+
+const bodyParser = require("body-parser");
+const socket = require("./socket");
+const connectDB = require("./db");
+const routes = require("./network/routes");
+
+connectDB(process.env.MONGODB_URI);
 
 app.use(bodyParser.json());
-app.use(router);
 
-router.get("/", (req, res) => {
-  res.send("Hello World!!!");
-});
+socket.connect(server);
 
-router.post("/", (req, res) => {
-  const responde = {
-    message: "Hello World!!!",
-    data: req.body,
-    query: req.query,
-  };
-  res.send(responde);
-});
+routes(app);
 
-app.listen(3000, () => {
-  console.log("Server is running on port 3000");
+app.use("/", express.static(__dirname + "/public"));
+
+const PORT = process.env.PORT || 8080;
+server.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });
